@@ -1,44 +1,73 @@
 "use client";
 
-import { usePathname } from  "next/navigation"
+import SidebarItem from "./SidebarItem";
+
+import { usePathname } from "next/navigation"
 import { useMemo } from "react";
- import UilSearch from '@iconscout/react-unicons/icons/uil-search'
- import UilHome from '@iconscout/react-unicons/icons/uil-estate'
+import { MdHome } from "@react-icons/all-files/md/MdHome";
+import { BsSearch } from "@react-icons/all-files/bs/BsSearch";
+import Box from "./Box";
+
 
 
 interface SidebarProps {
-	children : React.ReactNode;
+	children: React.ReactNode;
 }
 
 
-const Sidebar:React.FC<SidebarProps>=({children})=> {
+const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 
 	const pathname = usePathname()
 
-	const routes = useMemo(()=>[
+	const routes = useMemo(() => [
 		{
-			icon: UilSearch,
-			label:'Home',
-			active:pathname!=='/search',
-			href:'/'
+			icon: MdHome,
+			label: 'Home',
+			active: pathname !== '/search',
+			href: '/'
 		},
 
 		{
+			icon: BsSearch,
 				
-			label:'Search',
-			active:pathname==='/search',
-			href:'/search'
+			label: 'Search',
+			active: pathname === '/search',
+			href: '/search'
 		}
 
-		],[pathname])
+	], [pathname])
 	return (
-		<div>
-			{children}
-			{routes.map(r=>r.label)}
-      <UilSearch size="20" color="white" />
-      <UilHome size="20" color="white" />
+		<div className="flex h-full    ">
+			<div className="hidden md:flex flex-col h-full w-64 bg-black gap-y-2 p-2">
+				<Box>
 
-			
+					<div className="
+		flex
+		flex-col
+		gap-y-4
+		px-5
+		py-4
+		">
+						{routes.map((item) => (
+							<SidebarItem 
+								key={item.label} 
+								icon={item.icon}
+								label={item.label}
+								href={item.href}
+								active={item.active}
+							/>
+						))}
+					</div>
+				</Box>
+				<Box className="bg-red-300 h-full overflow-y-auto">second
+				</Box>
+
+			</div>
+
+
+			<main>
+				{children}
+			</main>
 
 		</div>
 	)
