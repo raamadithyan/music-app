@@ -1,11 +1,14 @@
 "use client";
 
 import SidebarItem from "./SidebarItem";
+import Library from "./Library";
+
 
 import { usePathname } from "next/navigation"
 import { useMemo } from "react";
 import { MdHome } from "@react-icons/all-files/md/MdHome";
-import { BsSearch } from "@react-icons/all-files/bs/BsSearch";
+import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+
 import Box from "./Box";
 
 
@@ -28,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 		},
 
 		{
-			icon: BsSearch,
+			icon: AiOutlineSearch,
 				
 			label: 'Search',
 			active: pathname === '/search',
@@ -44,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 					<div className="
 		flex
 		flex-col
-		gap-y-4
+		gap-y-2
 		px-5
 		py-4
 		">
@@ -59,7 +62,14 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 						))}
 					</div>
 				</Box>
-				<Box className="bg-red-300 h-full overflow-y-auto">second
+				<Box 
+				  className="
+				   bg-neutral-900
+				    h-full
+				     overflow-y-auto
+				     
+				     ">
+				<Library/>
 				</Box>
 
 			</div>

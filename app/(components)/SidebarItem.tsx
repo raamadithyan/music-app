@@ -16,6 +16,7 @@ const SidebarItem:React.FC<SidebarItemProps> = ({icon:Icon,label,active,href}) =
 		className={twMerge(`
 			 flex
 			 flex-row
+			 items-center
 			 h-auto
 			 w-full
 			 gap-x-4
@@ -28,9 +29,9 @@ const SidebarItem:React.FC<SidebarItemProps> = ({icon:Icon,label,active,href}) =
 			 py-1
 		`,active && "text-white")}
 		href={href}>
-			<Icon size={26}/>
+			<Icon  size={32}/>
 
-			<p className='truncate w-full'>{label}</p>
+			<p className='truncate w-full'>{		label}</p>
 		</Link>
 	)
 }
