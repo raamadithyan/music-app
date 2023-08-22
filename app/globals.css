@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
  
-html,body,:root {
-  height: 100%;
-  width: 100%;
-  background-color: black;
+html, body,:root {
+  height: 100%; 
+/*  width: fit-content;*/
+  background-color: black ;
   color-scheme: dark;
 }

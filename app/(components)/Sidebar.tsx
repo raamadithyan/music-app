@@ -40,8 +40,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 
 	], [pathname])
 	return (
-		<div className="flex h-full    ">
-			<div className="hidden md:flex flex-col h-full w-64 bg-black gap-y-2 p-2">
+		<div className="flex h-[100vh]    ">
+			<div className="hidden 
+          md:flex 
+          flex-col 
+          gap-y-2 
+          bg-black
+          h-full 
+          w-[300px] 
+          p-2">
 				<Box>
 
 					<div className="
@@ -54,10 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 						{routes.map((item) => (
 							<SidebarItem 
 								key={item.label} 
-								icon={item.icon}
-								label={item.label}
-								href={item.href}
-								active={item.active}
+								{...item}
 							/>
 						))}
 					</div>
@@ -74,10 +78,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 
 			</div>
 
-
-			<main>
+			
 				{children}
-			</main>
 
 		</div>
 	)
