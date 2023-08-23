@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 
 
 
-			  {/*Two Arrows*/}
+				{/*Two Arrows*/}
 				<div 
 					className="
 				    hidden
@@ -102,18 +102,18 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 
 				<div className="flex justify-center items-center gap-x-4">
 					<>
-					<Button onClick={()=>{}}
-					className="
+						<Button onClick={() => {}}
+							className="
 					  bg-transparent
 					  text-neutral-300
 					  font-medium
 
 					">
-					Sign in
-					</Button>
+							Sign in
+						</Button>
 
-					<Button onClick={()=>{}}
-					className="
+						<Button onClick={() => {}}
+							className="
 					  bg-white
 					  text-black
 					  px-6
@@ -122,8 +122,8 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 					  whitespace-nowrap
 
 					">
-					Log in
-					</Button>
+							Log in
+						</Button>
 
 
 

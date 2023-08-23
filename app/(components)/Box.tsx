@@ -1,9 +1,9 @@
 
 
-import {twMerge} from 'tailwind-merge'
-function Box({children,className}:{
-	children:React.ReactNode,
-	className?:string;
+import { twMerge } from 'tailwind-merge'
+function Box({ children, className }: {
+	children: React.ReactNode,
+	className?: string;
 }) {
 	return (
 		<div className={twMerge(`
@@ -11,9 +11,9 @@ function Box({children,className}:{
 			h-fit
 			w-full
 			rounded-lg
-			`,className)}> 
+			`, className)}> 
 			{children}
-			</div>
+		</div>
 	)
 }
 

@@ -10,6 +10,7 @@ export default function Home() {
         my-2
         mx-2
         md:ml-0
+        
         md:mr-2
           w-full
           h-full
@@ -49,17 +50,17 @@ export default function Home() {
         </div>
 
       </Header>
-<div className="ml-6">
-<div>
-<h1 className="text-xl font-semibold">
-Newest Songs
-</h1> 
-</div>
+      <div className="ml-6">
+        <div>
+          <h1 className="text-xl font-semibold">
+            Newest Songs
+          </h1> 
+        </div>
 
-<div>
-List of Songs
-</div>
-</div>
+        <div>
+          List of Songs
+        </div>
+      </div>
 
         
     </div >

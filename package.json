@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "supabase": "^1.88.0",
     "tailwind-merge": "^1.14.0"
   }
 }

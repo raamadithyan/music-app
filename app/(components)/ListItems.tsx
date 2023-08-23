@@ -7,13 +7,13 @@ import { FaPlay } from "@react-icons/all-files/fa/FaPlay";
 
 
 interface ListItemsProps {
-image:string;
-name:string;
-href:string;
+	image: string;
+	name: string;
+	href: string;
 }
 
 
-const ListItems:React.FC<ListItemsProps> = ({image,name,href}) => {
+const ListItems: React.FC<ListItemsProps> = ({ image, name, href }) => {
 	const router = useRouter();
 
 	// Add Auth before push
@@ -22,7 +22,7 @@ const ListItems:React.FC<ListItemsProps> = ({image,name,href}) => {
 	}
 	return (
 		<button onClick={onClick}
-		  className="
+			className="
             relative group
             flex 
             items-center
@@ -34,27 +34,27 @@ const ListItems:React.FC<ListItemsProps> = ({image,name,href}) => {
             transition
             
 		  ">
-		  <div
-		    className="
+			<div
+				className="
 		    relative
 		    min-h-[64px]
 		    min-w-[64px]
 		    
 
 		    ">
-		    <Image 
-		      className="
+				<Image 
+					className="
 		        object-cover"
-		        fill
-		      src={image}  alt="Image"/>
+					fill
+					src={image} alt="Image" />
 
 			</div>
 			<p className="font-medium truncate py-5 ">
-		      {name}
-		      </p>
+				{name}
+			</p>
 
-		      <div 
-		      className="
+			<div 
+				className="
 		        absolute
                 transition
                 opacity-0
@@ -70,9 +70,9 @@ const ListItems:React.FC<ListItemsProps> = ({image,name,href}) => {
                 hover:scale-110
 
 		        ">
-		        <FaPlay className="text-black" />
+				<FaPlay className="text-black" />
 
-		      </div>
+			</div>
 
 		</button>
 	)
