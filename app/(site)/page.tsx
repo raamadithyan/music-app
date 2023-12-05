@@ -1,8 +1,8 @@
-import ListItems from "../(components)/ListItems"
-import Header from "../(components)/Header"
+import ListItems from "../(components)/ListItems";
+import Header from "../(components)/Header";
 export default function Home() {
   return (
-    <div   
+    <div
       className="
 
         bg-neutral-900 
@@ -17,20 +17,21 @@ export default function Home() {
           overflow-hidden
           overflow-y-auto
         
-        " > 
-
+        "
+    >
       <Header className="text-white">
         <div className="mb-4">
-          <h1 
+          <h1
             className="
             text-white
             text-2xl
             md:text-3xl
             font-semibold
-            ">
+            "
+          >
             Welcome Back
           </h1>
-          <div 
+          <div
             className="
             grid
             grid-cols-1
@@ -39,30 +40,19 @@ export default function Home() {
             2xl:grid-cols-4
             gap-3
             mt-4
-            ">
-            <ListItems
-              image="/images/liked.png"
-              href=""
-              name="Liked songs"
-            />
+            "
+          >
+            <ListItems image="/images/liked.png" href="" name="Liked songs" />
           </div>
-
         </div>
-
       </Header>
       <div className="ml-6">
         <div>
-          <h1 className="text-xl font-semibold">
-            Newest Songs
-          </h1> 
+          <h1 className="text-xl font-semibold">Newest Songs</h1>
         </div>
 
-        <div>
-          List of Songs
-        </div>
+        <div>List of Songs NextJS updated to 4.0.3</div>
       </div>
-
-        
-    </div >
-  )
+    </div>
+  );
 }
