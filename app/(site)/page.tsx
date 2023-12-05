@@ -51,7 +51,7 @@ export default function Home() {
           <h1 className="text-xl font-semibold">Newest Songs</h1>
         </div>
 
-        <div>List of Songs NextJS updated to 4.0.3</div>
+        <div>List of Songs NextJS updated to 4.0.3 and added space</div>
       </div>
     </div>
   );
